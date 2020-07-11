@@ -1,0 +1,9 @@
+<div class="select">
+    <mat-form-field>
+        <mat-label>Selected Country</mat-label>
+        <mat-select [ngModel]="selectedCountry" (ngModelChange)="selectedCountry = $event; newCountry($event)">
+          <mat-option></mat-option>
+          <mat-option [value]="option.value" *ngFor="let option of countriesist">{{ option.viewValue }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

@@ -1,0 +1,11 @@
+.card-title {
+    display: flex;
+    justify-content: space-around;
+    font-size: 26px;
+    span {
+        display: block;
+    }
+    .value {
+        color: red;
+    }
+}

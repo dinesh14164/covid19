@@ -1,0 +1,9 @@
+<div class="select">
+    <mat-form-field>
+        <mat-label>Selected Date</mat-label>
+        <mat-select [ngModel]="currentDate" (ngModelChange)="currentDate = $event; newDate($event)">
+          <mat-option></mat-option>
+          <mat-option [value]="option.value" *ngFor="let option of dateList">{{ option.viewValue }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

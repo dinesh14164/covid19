@@ -1,0 +1,35 @@
+<div class="dash-container" *ngIf="countries.length">
+    <div class="countries-container">
+        <div class="countries">
+            <app-select-country [countries]="countries" [selected]="selectedCountry"></app-select-country>
+        </div>
+    </div>
+    <div class="country-container">
+        <div class="country">
+            <app-covid-card [name]="'Current Country'" [cases]="selectedCountry"></app-covid-card>
+        </div>
+    </div>
+    <div class="cards-container">
+        <div class="cards">
+            <div class="card-left">
+                <app-covid-card [name]="'Total Cases'" [cases]="maxCases"></app-covid-card>
+            </div>
+            <div class="card-right">
+                <app-covid-card [name]="'Total Deaths'" [cases]="maxDeaths"></app-covid-card>
+            </div>
+        </div>
+    </div>
+    <div class="graphs-container">
+        <div class="graphs">
+            <div class="new-cases left">
+                <app-covid-charts [dataX]="dates" [dataY]="new_cases" [name]="'New Cases'"></app-covid-charts>
+            </div>
+            <div class="new-deaths right">
+                <app-covid-charts [dataX]="dates" [dataY]="new_deaths" [name]="'New Deaths'"></app-covid-charts>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="covid-table" *ngIf="countries.length">
+    <app-table [tableData]="tableData"></app-table>
+</div>

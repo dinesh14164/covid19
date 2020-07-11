@@ -1,0 +1,55 @@
+.dash-container {
+    .countries-container {
+        margin: 20px;
+    }
+    .country-container {
+        margin: 20px;
+    }
+    .cards-container {
+        margin: 20px;
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            // .card-left {
+            //     flex-basis: 45%;
+            // }
+            // .card-right {
+            //     flex-basis: 45%;
+            // }
+        }
+    }
+    .graphs-container {
+        margin: 20px;
+        background-color: #424242;
+        .graphs {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            .left {
+                flex-basis: 45%;
+                margin: 10px;
+            }
+            .right {
+                margin: 10px;
+                flex-basis: 45%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .dash-container {
+        .cards-container {
+            .cards {
+                flex-direction: row;
+                .card-left {
+                    flex-basis: 45%;
+                }
+                .card-right {
+                    flex-basis: 45%;
+                }
+            }
+        }  
+    }
+}

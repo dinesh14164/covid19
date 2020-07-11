@@ -1,0 +1,40 @@
+
+.table-container {
+    margin: 10px;
+    .filter-data {
+        background-color: rgb(66, 66, 66);
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        .filter {
+            width: 25%;
+            input {
+                color: white;
+            }
+        }
+        .date {
+          width: 25%;
+          input {
+              color: white;
+          }
+        }
+    }
+}
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 16%;
+  }
+
+@media (min-width: 768px) {
+  .table-container {
+    margin: 20px;
+  }
+}
