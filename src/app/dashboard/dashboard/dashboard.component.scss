@@ -1,6 +1,15 @@
+.spinner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .dash-container {
     .countries-container {
         margin: 20px;
+        margin-top: 70px;
     }
     .country-container {
         margin: 20px;

@@ -1,3 +1,14 @@
+
+.warning {
+      width: 100%;
+      background-color: rgb(215, 243, 183);
+      .text{
+          color: green;
+          text-align: center;
+      }
+      border: 2px solid green;
+      border-radius: 5px;
+}
 .success {
     color: green;
   }

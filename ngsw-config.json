@@ -34,7 +34,7 @@
     	{
         "name": "covid19",
         "urls": [
-          "http://localhost:5000/data/owid-covid-data.json"
+          "https://covid.ourworldindata.org/data/owid-covid-data.json"
         ],
         "cacheConfig": {
           "maxSize": 5,

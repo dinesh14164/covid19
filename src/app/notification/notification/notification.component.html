@@ -1,9 +1,8 @@
-<button (click)="submitNotification()">
-    Notify me
- </button>
- <p *ngIf="isGranted" class="success">
-   Notifications were granted by the user
- </p>
+<div class="warning"  *ngIf="sent">
+  <p class="text">Notification sent</p>
+</div>
+<button mat-raised-button color="accent" *ngIf="isEnabled && !isGranted" (click)="submitNotification()">Enable Notification</button>
+<button mat-raised-button color="accent" *ngIf="isGranted" (click)="sendNotification()">Push Notification</button>
  <p *ngIf="!isEnabled" class="error">
    Notifications are not available in the browser or enabled in the application
  </p>

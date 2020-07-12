@@ -1,0 +1,38 @@
+.header {
+    background-color: #424242;
+    width: 100%;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    .home-container {
+        width: 30%;
+        button {
+            outline: none;
+        }
+    }
+ .header-items {
+    width: 80%;
+    .items {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 200px;
+        float: right;
+        .item {
+            cursor: pointer;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+ }   
+}

@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
-import { NotificationModule } from './notification/notification.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { CoreModule } from './core/core.module';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -16,10 +17,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NotificationModule,
+    CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

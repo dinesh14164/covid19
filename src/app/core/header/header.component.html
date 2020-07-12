@@ -1,0 +1,23 @@
+<div class="header">
+    <div class="home-container">
+        <button mat-fab color="warn" aria-label="Example icon button with a home icon" routerLink="/">
+          <mat-icon>home</mat-icon>
+        </button>
+    </div>
+    <div class="header-items">
+        <div class="items">
+            <div class="item" *ngIf="!showProfile">
+                <a routerLink="/auth/login" class="link">Login</a>
+            </div>
+            <div class="item" *ngIf="!showProfile">
+                <a routerLink="/auth/signup" class="link">Signup</a>
+            </div>
+            <div class="item" *ngIf="showProfile">
+                <a routerLink="/auth/profile" class="link">Profile</a>
+            </div>
+            <div class="item" *ngIf="showProfile">
+                <button mat-raised-button (click)="logout()" color="accent">Logout</button>
+            </div>
+        </div>
+    </div>
+</div>

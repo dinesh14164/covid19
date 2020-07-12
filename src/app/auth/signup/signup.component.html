@@ -1,0 +1,31 @@
+<div class="signup-container">
+    <div class="warning" [class.has-error]="hasError" *ngIf="hasError && message">
+      <p class="text">{{message}}</p>
+    </div>
+    <div class="warning" [class.has-error]="hasError" *ngIf="!hasError && message">
+      <p class="text">{{message}}</p>
+    </div>
+    <div class="signup">
+        <div class="heading">
+            <p class="title">Signup</p>
+        </div>
+        <form [formGroup]="signupForm" class="signup-form" (ngSubmit)="onSubmit()">
+            <mat-form-field MatFormFieldControl appearance="fill">
+              <mat-label>Enter your email</mat-label>
+              <input matInput class="form-control" placeholder="pat@example.com" formControlName="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Enter your password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" name="password" required>
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+            </mat-form-field>      
+            <div class="button-container">
+                <button mat-raised-button color="primary" [disabled]="!signupForm.valid">Signup</button>
+            </div>  
+      </form>
+    </div>
+</div>

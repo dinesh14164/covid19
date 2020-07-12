@@ -1,0 +1,79 @@
+.signup-container {
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .warning {
+        width: 100%;
+        &.has-error {
+            background-color: rgb(243, 188, 188);
+            border: 2px solid red;
+            .text{
+                color: red;
+            }
+        }
+        background-color: rgb(215, 243, 183);
+        .text{
+            color: green;
+        }
+        border: 2px solid green;
+        border-radius: 5px;
+    }
+    .signup {
+        width: 340px;
+        border: 2px solid #3f51b5;
+        border-radius: 5px;
+        .heading {
+            margin: 20px 0;
+            width: 100%;
+            .title {
+                text-align: center;
+                font-size: 24px;
+                color: #3f51b5;
+            }
+        }
+        mat-form-field {
+            display: block;
+            margin: 20px;
+            mat-label {
+                color: #3f51b5;;;
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus, 
+            input:-webkit-autofill:active  {
+                box-shadow: white;
+                -webkit-box-shadow: 0 0 0 30px white inset !important;
+            }
+            ::ng-deep {
+                .mat-form-field-flex {
+                    &:hover {
+                        .mat-form-field-underline {
+                            span {
+                                background-color: #3f51b5;;;
+                            }
+                        }
+                    }
+                }
+                .mat-form-field-underline {
+                    &::before {
+                        background-color: #3f51b5;;;
+                    }
+                }
+            }
+        }
+        .button-container {
+            margin: 20px;
+            button {
+                cursor: pointer;
+                &:disabled {
+                    background-color: rgba(0,0,0,.12);
+                    color: white;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}

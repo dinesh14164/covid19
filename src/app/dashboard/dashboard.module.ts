@@ -7,6 +7,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSortModule} from '@angular/material/sort';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -37,7 +38,8 @@ import { SelectDateComponent } from './select-date/select-date.component';
     MatSortModule,
     DashboardRoutingModule,
     ChartsModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule
   ],
   exports: [DashboardComponent],
   providers: [

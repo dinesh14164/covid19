@@ -13,6 +13,6 @@ export class DashboardService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get(`${this.urlLocal}/data/owid-covid-data.json`);
+    return this.http.get(`${this.url}/data/owid-covid-data.json`);
   }
 }
