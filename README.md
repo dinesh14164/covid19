@@ -17,7 +17,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## To see service worker and push notification in action follow the following steps
 
-1. Run `ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory. Navigate to `http://localhost:8080/`
+1. Run `ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory. 
+Run `node serve` for a prod server. Navigate to `http://localhost:8080/`
 
 2. Do signup and login. Then go into the profile section. Enable the Notification.
 3. Push Notifiction using push notification button.
