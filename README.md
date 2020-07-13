@@ -15,7 +15,7 @@
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## To Service worker and push notification in action follow the following steps
+## To see service worker and push notification in action follow the following steps
 
 1. Run `ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory. Navigate to `http://localhost:8080/`
 
@@ -23,7 +23,3 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 3. Push Notifiction using push notification button.
 4. Website also works with chached data. Turnoff your internet and reload the page, you will still see website in action 
 
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
