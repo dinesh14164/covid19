@@ -14,6 +14,7 @@ export class TableComponent implements OnInit, OnChanges {
   @Input() displayedColumns: string[] = ['country', 'new_cases', 'new_deaths', 'total_cases', 'total_deaths'];
   @Input() tableData: ITableData[];
   dataSource: MatTableDataSource<ITableData>;
+  selectedDate: string = '2020-07-09';
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   constructor() {
@@ -22,6 +23,7 @@ export class TableComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.tableData);
     console.log('T Data: ', this.tableData);
+    this.selectedDate = this.tableData[0].date;
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
